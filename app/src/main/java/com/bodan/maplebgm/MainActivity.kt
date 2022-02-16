@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "환영합니다..", Toast.LENGTH_LONG).show()
 
         findViewById<View>(R.id.startButton).setOnClickListener {
-            // PlayActivity를 시작하는 Intent를 생성
-            val intent = Intent(this@MainActivity, PlayActivity::class.java)
-            startActivity(intent) // intent를 사용하여 MainActivity 시작
+            // LoginActivity를 시작하는 Intent를 생성
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent) // intent를 사용하여 LoginActivity 시작
         }
     }
 }
