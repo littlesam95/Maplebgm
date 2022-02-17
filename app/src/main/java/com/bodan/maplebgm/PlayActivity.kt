@@ -10,11 +10,9 @@ class PlayActivity : AppCompatActivity() {
     private var mBinding : ActivityPlayBinding? = null
     private val binding get() = mBinding!!
 
-    lateinit var mp3List : ArrayList<String>
-    lateinit var selectedMp3 : String
-    lateinit var mPlayer : MediaPlayer
+    private var mPlayer : MediaPlayer? = null
 
-
+    var bgm = arrayOf(R.raw.heroes5, R.raw.abovethetreetops, R.raw.restnpeace)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +22,14 @@ class PlayActivity : AppCompatActivity() {
             val id = intent.getStringExtra("idText")
             Toast.makeText(applicationContext, id + "님 환영합니다!", Toast.LENGTH_LONG).show()
         }
-
-        mPlayer = MediaPlayer.create(this, R.raw.abovethetreetops)
-        mPlayer.start()
+        var play : Int = 0
+        while (play < 3) {
+            mPlayer = MediaPlayer.create(this, bgm[play])
+            mPlayer?.start()
+            mPlayer = null
+            if(mPlayer?.isPlaying == false){
+                play = play + 1;
+            }
+        }
     }
 }
