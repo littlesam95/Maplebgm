@@ -11,6 +11,7 @@ class PlayActivity : AppCompatActivity() {
     private val binding get() = mBinding!!
 
     private lateinit var mPlayer : MediaPlayer
+    private var score = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,13 @@ class PlayActivity : AppCompatActivity() {
         mPlayer = MediaPlayer.create(this, R.raw.abovethetreetops)
         binding.bgmplayButton.setOnClickListener {
             mPlayer.start()
+        }
+        binding.answerButton.setOnClickListener {
+            var answerText = binding.answerText.text.toString()
+            score = score + 1
+            Toast.makeText(applicationContext, "정답입니다! 현재 점수는 " + score + "점입니다.", Toast.LENGTH_LONG).show()
+            mPlayer.stop()
+            mPlayer = MediaPlayer.create(this, R.raw.restnpeace)
         }
     }
 }

@@ -42,7 +42,7 @@
             android:orientation="horizontal"></LinearLayout>
 
         <EditText
-            android:id="@+id/idText"
+            android:id="@+id/answerText"
             android:layout_width="212dp"
             android:layout_height="match_parent"
             android:inputType="text"
