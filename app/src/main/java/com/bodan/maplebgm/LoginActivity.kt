@@ -17,13 +17,15 @@ class LoginActivity : AppCompatActivity() {
         mBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Toast.makeText(applicationContext, "별명을 입력해주세요!", Toast.LENGTH_LONG).show()
+        val toast = Toast.makeText(applicationContext, "별명을 입력해주세요!", Toast.LENGTH_SHORT)
+        toast.show()
 
         binding.generateButton.setOnClickListener {
             var idText = binding.idText.text.toString()
 
             val intent = Intent(this@LoginActivity, PlayActivity::class.java)
             intent.putExtra("idText", idText)
+            toast.cancel()
             startActivity(intent) // intent를 사용하여 PlayActivity 시작
         }
     }
