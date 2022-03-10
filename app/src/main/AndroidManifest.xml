@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Maplebgm">
         <activity
+            android:name=".FinishActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
