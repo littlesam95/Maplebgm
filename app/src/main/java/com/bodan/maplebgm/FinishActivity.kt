@@ -1,5 +1,7 @@
 package com.bodan.maplebgm
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -119,7 +121,10 @@ class FinishActivity : AppCompatActivity() {
 
         // 메인 화면으로 돌아가기
         binding.returnButton.setOnClickListener {
-            ActivityCompat.finishAffinity(this)
+            val intent = Intent(this@FinishActivity, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // 실행할 activity가 이미 스택에 존재하면 해당 activity 위에 존재하는 다른 activity 모두 종료시킨다.
+            startActivity(intent)
+            finish()
         }
 
         // 앱 종료
@@ -127,5 +132,15 @@ class FinishActivity : AppCompatActivity() {
             ActivityCompat.finishAffinity(this)
             System.exit(0);
         }
+
+        // 제작자놈 블로그로 이동
+       binding.blogButton.setOnClickListener {
+           val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://littlesam95.tistory.com/188"))
+           startActivity(intent)
+        }
+    }
+
+    override fun onBackPressed() {
+        // super.onBackPressed()
     }
 }
