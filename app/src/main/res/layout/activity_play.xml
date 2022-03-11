@@ -72,7 +72,7 @@
             android:layout_width="212dp"
             android:layout_height="match_parent"
             android:inputType="text"
-            android:maxLength="50"
+            android:maxLength="100"
             android:privateImeOptions="defaultInputmode=korean"
             android:text="원곡 제목도 가능!" />
 

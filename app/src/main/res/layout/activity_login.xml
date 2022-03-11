@@ -48,8 +48,8 @@
             android:id="@+id/idText"
             android:layout_width="212dp"
             android:layout_height="match_parent"
-            android:maxLength="6"
             android:inputType="text"
+            android:maxLength="20"
             android:privateImeOptions="defaultInputmode=korean"
             android:text="원기형" />
 
