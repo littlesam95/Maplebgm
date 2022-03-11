@@ -48,7 +48,7 @@ class PlayActivity : AppCompatActivity() {
     var nameArrayFourth = arrayOf(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
         "위험한크로코", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
         " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-        " ", " ", " ", " ", " ", "폐쇄", " ", " ", " ", " ", " ", " ", " ", " ", "안개", " ", " ", " ", " ", " ", " " ," ", " ", " ", " ",
+        " ", " ", " ", " ", " ", "폐쇄", " ", " ", " ", " ", " ", " ", " ", " ", "안개", " ", " ", " ", " ", " ", " " ," ", "리멘", " ", " ",
         " ", " ", " ", " ", " ", " ", " ", " ")
     var nameEngArray = arrayOf("Title", "Above the Treetops", "Rest N Peace", "When the Morning Comes", "Nightmare",
         "Bad Guys", "Floral Life", "Shinin' Harbor", "Snowy Village", "Fantastic Thinking", "Ariant", "Dispute",
